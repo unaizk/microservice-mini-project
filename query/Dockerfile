@@ -1,9 +1,6 @@
 # Command to configure the base image (official Node.js base image)
 FROM node:18-alpine
 
-# Command to update the base image
-RUN apt update
-
 # Set the working directory for the container
 WORKDIR /app
 
