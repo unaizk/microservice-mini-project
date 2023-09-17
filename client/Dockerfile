@@ -1,6 +1,10 @@
 # Command to configure the base image (official Node.js base image)
 FROM node:18-alpine
 
+ENV CI=true
+
+ENV WDS_SOCKET_PORT=0
+
 # Set the working directory for the container
 WORKDIR /app
 
