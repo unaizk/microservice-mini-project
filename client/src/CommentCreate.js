@@ -1,7 +1,7 @@
 import React,{useState} from 'react'
 import axios from "axios";
 
-const CommentCreate = ({postId}) => {
+const CommentCreate = ({postId,changeRefresh}) => {
 
     const [content,setContent] = useState('')
 
@@ -11,6 +11,10 @@ const CommentCreate = ({postId}) => {
             content
         });
         setContent('')
+        setTimeout(() => {
+            changeRefresh();
+          }, 1000);
+        
     }
   return (
     <div>
